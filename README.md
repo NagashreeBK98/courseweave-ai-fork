@@ -173,9 +173,12 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 👥 Team
 
-- Sachin - Senior Data Engineer, AI/ML Engineering
-- [Team Member 2]
-- [Team Member 3]
+- Sachin Sreekumar
+- Nagashree Bommenahalli Kumaraswamy
+- Vigneshwaran Jayaraman
+- Kavin Priyadarrsan Murugesan
+- Jogeashwini Srinivasan Ramesh
+- Siddharth Mohapatra
 
 ## 🙏 Acknowledgments
 
