@@ -50,7 +50,7 @@ jobs:
           PGPORT: ${{ secrets.PGPORT }}
           PGDATABASE: ${{ secrets.PGDATABASE }}
           PGUSER: ${{ secrets.PGUSER }}
-          PGPASSWORD: ${{ secrets.PGPASSWORD }}
+          PGPASSWORD: ${{ secrets.PG_PASSWORD }}
         run: |
           chmod +x backup_courseweave.sh
           ./backup_courseweave.sh
