@@ -25,7 +25,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dvc[gcs] pinecone-client
+          pip install dvc[gcs] pinecone
 
       # Authenticate with Google Cloud
       - name: Authenticate to Google Cloud
