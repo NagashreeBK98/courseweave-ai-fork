@@ -76,9 +76,14 @@ jobs:
 
       # Commit updated DVC files
       - name: Commit DVC metadata
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add .
-          git commit -m "Automated DB + Pinecone backup" || echo "No changes to commit"
-          git push
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+
+        git fetch origin
+        git rebase origin/main || git rebase --abort
+
+        git add .
+        git commit -m "Automated DB + Pinecone backup" || echo "No changes"
+
+        git push origin main
