@@ -1,0 +1,6 @@
+python export_pinecone.py
+dvc add data/embeddings/pinecone_exports
+git add export_pinecone.py test_pinecone.py
+git commit -am "Update Pinecone vectors"
+dvc push
+git push
