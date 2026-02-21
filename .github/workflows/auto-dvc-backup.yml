@@ -76,20 +76,20 @@ jobs:
       - name: Push to DVC Remote
         run: dvc push
 
-      # Commit updated DVC files
+      # Commit DVC metadata
       - name: Commit DVC metadata
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          # Pull latest changes first
-          git pull --rebase origin main
-
-          # Stage new DVC files
+          # Stage changes first
           git add .
 
-          # Commit if anything changed
+          # Commit (if any)
           git commit -m "Automated DB + Pinecone backup" || echo "No changes"
 
-          # Push back to repo
+          # Pull remote changes safely
+          git pull --rebase origin main || echo "No remote changes"
+
+          # Push back
           git push origin main
