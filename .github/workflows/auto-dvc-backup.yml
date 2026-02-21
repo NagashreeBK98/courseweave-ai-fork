@@ -14,6 +14,8 @@ jobs:
       # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # Setup Python
       - name: Set up Python
@@ -25,7 +27,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install dvc dvc-gs pinecone
+          pip install dvc dvc-gs pinecone-client pinecone
 
       # Authenticate with Google Cloud
       - name: Authenticate to Google Cloud
@@ -34,7 +36,7 @@ jobs:
           credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
           export_environment_variables: true
 
-      # Export ADC so DVC / gcsfs can see credentials
+      # Export ADC for DVC
       - name: Set Google ADC for DVC
         run: |
           echo "GOOGLE_APPLICATION_CREDENTIALS=$GOOGLE_GHA_CREDS_PATH" >> $GITHUB_ENV
@@ -59,7 +61,7 @@ jobs:
       - name: Export Pinecone vectors
         env:
           PINECONE_API_KEY: ${{ secrets.PINECONE_API_KEY }}
-          PINECONE_INDEX_NAME: courseweave-ai
+          PINECONE_INDEX_NAME: ${{ secrets.PINECONE_INDEX_NAME }}
         run: |
           mkdir -p data/embeddings/pinecone_exports
           python export_pinecone.py
@@ -76,14 +78,14 @@ jobs:
 
       # Commit updated DVC files
       - name: Commit DVC metadata
-      run: |
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
 
-        git fetch origin
-        git rebase origin/main || git rebase --abort
+          git fetch origin
+          git rebase origin/main || git rebase --abort
 
-        git add .
-        git commit -m "Automated DB + Pinecone backup" || echo "No changes"
+          git add .
+          git commit -m "Automated DB + Pinecone backup" || echo "No changes"
 
-        git push origin main
+          git push origin main
