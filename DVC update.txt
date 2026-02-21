@@ -1,0 +1,4 @@
+./backup_courseweave.sh
+dvc add db/postgres_dumps
+git commit -am "DB backup"
+dvc push
