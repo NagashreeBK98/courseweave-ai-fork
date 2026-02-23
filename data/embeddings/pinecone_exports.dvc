@@ -1,0 +1,6 @@
+outs:
+- md5: e6e4d78e6e3247a5c514f27663797826.dir
+  size: 476251
+  nfiles: 1
+  hash: md5
+  path: pinecone_exports
