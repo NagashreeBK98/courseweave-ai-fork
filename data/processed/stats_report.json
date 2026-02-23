@@ -1,0 +1,24 @@
+{
+  "generated_at": "2026-02-23T18:18:25.508599",
+  "courses": {
+    "total_courses": 25,
+    "by_program": {
+      "MS_DAE": 12,
+      "MS_CS": 5,
+      "MS_DS": 4,
+      "MS_DA": 2,
+      "MS_IS": 2
+    },
+    "by_type": {
+      "Core": 14,
+      "Elective": 11
+    },
+    "avg_credits": 4.0,
+    "unique_programs": 5
+  },
+  "prerequisites": {
+    "total_prereq_pairs": 11,
+    "courses_with_prereqs": 11,
+    "most_required_course": "IE6200"
+  }
+}
