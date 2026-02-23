@@ -1,5 +1,4 @@
 name: CourseWeave Auto DVC Backup
-
 on:
   workflow_dispatch:
   push:
