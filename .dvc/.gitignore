@@ -1,3 +1,30 @@
 /config.local
 /tmp
 /cache
+
+# Environment
+.env
+
+# Airflow
+airflow-home/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# GCP credentials
+gha-creds-*.json
+*service-account*.json
+*-credentials.json
+
+# Temp files
+data/temp/
+
+# OS
+.DS_Store
+
+# DVC cache
+.dvc/cache/
+.dvc/tmp/

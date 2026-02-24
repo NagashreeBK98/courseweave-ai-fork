@@ -26,4 +26,4 @@ jobs:
         run: uv pip install -r requirements.txt --system
 
       - name: Run tests
-        run: python -m pytest tests/ -v
+        run: python -m pytest Data-Pipeline/tests/ -v
