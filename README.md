@@ -182,7 +182,7 @@ This project is licensed under the MIT License - see [LICENSE](LICENSE) file.
 
 ## 🙏 Acknowledgments
 
-- Northeastern University LLMOps Course
+- Northeastern University MLOps Course
 - LangChain Framework
 - Google Cloud Platform
 
