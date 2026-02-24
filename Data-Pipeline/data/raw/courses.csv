@@ -1,0 +1,26 @@
+course_code,course_name,credits,program_code,course_type
+IE6400,Foundations of Data Analytics Engineering,4,MS_DAE,Core
+IE6700,Data Management and Database Design,4,MS_DAE,Core
+IE7275,Data Mining in Engineering,4,MS_DAE,Core
+IE6600,Computation and Visualization for Analytics,4,MS_DAE,Core
+IE6200,Engineering Probability and Statistics,4,MS_DAE,Core
+IE7615,Neural Networks and Deep Learning,4,MS_DAE,Elective
+IE7500,Applied Natural Language Processing,4,MS_DAE,Elective
+IE6750,Data Warehousing and Integration,4,MS_DAE,Elective
+IE7215,Applied Statistics for Engineering,4,MS_DAE,Elective
+IE7285,Statistical Quality Control,4,MS_DAE,Elective
+IE7200,Supply Chain Engineering,4,MS_DAE,Elective
+IE5200,Mathematics for Machine Learning,4,MS_DAE,Elective
+DA5020,Collecting Storing and Retrieving Data,4,MS_DA,Core
+DA5030,Introduction to Data Mining and Machine Learning,4,MS_DA,Core
+DS5110,Introduction to Data Management and Processing,4,MS_DS,Core
+DS5220,Supervised Machine Learning and Learning Theory,4,MS_DS,Core
+DS5230,Unsupervised Machine Learning and Data Mining,4,MS_DS,Elective
+DS5500,Data Science Capstone,4,MS_DS,Core
+CS6140,Machine Learning,4,MS_CS,Core
+CS6220,Data Mining Techniques,4,MS_CS,Elective
+CS5800,Algorithms,4,MS_CS,Core
+CS6120,Natural Language Processing,4,MS_CS,Elective
+CS7150,Deep Learning,4,MS_CS,Elective
+DAMG7370,Designing Advanced Data Architectures for Business Intelligence,4,MS_IS,Core
+DAMG6210,Managing Data and Organizations,4,MS_IS,Core
