@@ -14,6 +14,7 @@ import logging
 import pandas as pd
 from pathlib import Path
 from datetime import datetime
+from datetime import datetime, timezone
 
 logger = logging.getLogger(__name__)
 
@@ -123,7 +124,7 @@ def generate_statistics(cleaned: dict) -> dict:
     prereqs = cleaned["prerequisites"]
 
     stats = {
-        "generated_at": datetime.utcnow().isoformat(),
+        "generated_at": datetime.now(timezone.utc).isoformat(),
         "courses": {
             "total_courses":         int(len(courses)),
             "by_program":            courses["program_code"].value_counts().to_dict(),

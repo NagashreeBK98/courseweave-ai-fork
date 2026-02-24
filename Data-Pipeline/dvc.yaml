@@ -1,0 +1,36 @@
+stages:
+  acquire:
+    cmd: python scripts/acquire_data.py
+    deps:
+      - scripts/acquire_data.py
+      - data/raw/courses.csv
+      - data/raw/prerequisites.csv
+    outs:
+      - data/temp/raw_courses.json
+      - data/temp/raw_prerequisites.json
+
+  preprocess:
+    cmd: python scripts/preprocess_data.py
+    deps:
+      - scripts/preprocess_data.py
+      - data/temp/raw_courses.json
+      - data/temp/raw_prerequisites.json
+    outs:
+      - data/temp/cleaned_courses.json
+      - data/temp/cleaned_prerequisites.json
+
+  validate:
+    cmd: python scripts/validate_data.py
+    deps:
+      - scripts/validate_data.py
+      - data/temp/cleaned_courses.json
+      - data/temp/cleaned_prerequisites.json
+    outs:
+      - data/processed/stats_report.json
+
+  load:
+    cmd: python scripts/load_data.py
+    deps:
+      - scripts/load_data.py
+      - data/temp/cleaned_courses.json
+      - data/temp/cleaned_prerequisites.json

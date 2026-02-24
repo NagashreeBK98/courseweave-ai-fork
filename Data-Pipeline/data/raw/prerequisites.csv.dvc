@@ -1,0 +1,5 @@
+outs:
+- md5: 291e39713bc814ba4aaba9a789908d6c
+  size: 187
+  hash: md5
+  path: prerequisites.csv

@@ -1,0 +1,5 @@
+outs:
+- md5: 598b7eac2d236a38962498bd2246d0b8
+  size: 1469
+  hash: md5
+  path: courses.csv
