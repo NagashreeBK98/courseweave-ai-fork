@@ -18,15 +18,6 @@ dvc-gs>=3.0.0
 # Web Scraping
 beautifulsoup4>=4.12.0
 
-# Utilities
-python-dotenv>=1.0.0
-
-# Testing
-pytest>=8.0.0
-
-# Web Scraping
-beautifulsoup4>=4.12.0
-
 # LangChain
 langchain-core>=0.1.0
 langchain-huggingface>=0.0.1
@@ -39,6 +30,11 @@ pinecone-client>=3.0.0
 pymupdf>=1.23.0
 langchain-experimental>=0.0.1
 
+# Bias Detection
 fairlearn>=0.9.0
 
-echo "fairlearn>=0.9.0" 
+# Utilities
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=8.0.0
